@@ -4,6 +4,7 @@ import automationhat
 from flask import Flask, flash, render_template, redirect, url_for
 
 app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/' #changeme, just a test
 
 @app.route('/')
 def index():
