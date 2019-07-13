@@ -1,15 +1,15 @@
 import time
 import automationhat
 
-from flask import Flask, redirect, url_for
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello world <a href="/water">Water plants</a>'
+    return render_template('index.html')
 
-@app.route('/water')
+@app.route('/water', methods=['POST'])
 def water():
     automationhat.relay.one.on()
     time.sleep(5)
