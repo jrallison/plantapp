@@ -16,7 +16,7 @@ def water():
     time.sleep(5)
     automationhat.relay.one.off()
     
-    flash('You just watered your trees for 5 seconds!')
+    flash('Yay, you just watered your trees for 5 seconds!')
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
